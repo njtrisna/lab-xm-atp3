@@ -17,7 +17,7 @@ class LoginController extends Controller
 		
 		
 
-		$result = DB::table('user')->where('username', $req->uname)
+		$result = DB::table('admininfo')->where('username', $req->uname)
 				->where('password', $req->password)
 				->get();
 		
