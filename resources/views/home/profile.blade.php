@@ -19,6 +19,7 @@
 		<tr>
 			<td>Name :</td>
 			<td>{{$std['name']}}</td>
+			
 		</tr>
 		<tr>
 			<td>Email:</td>
