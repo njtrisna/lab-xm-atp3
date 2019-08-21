@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers;.
+
+
 
 use Illuminate\Http\Request;
 use App\User;
@@ -20,6 +22,7 @@ class customerController extends Controller
 
 
 		
+		$user = new User();
 		$user = new User();
     	$user->username = $req->uname;
     	$user->password = $req->password;

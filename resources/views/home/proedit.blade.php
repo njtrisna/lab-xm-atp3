@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit Student</title>
+	<title>Edit</title>
 </head>
 <body>
 
-	<h2>Edit Student</h2>
+	<h2>Edit</h2>
 
 	<a href="{{route('home.stdlist')}}">Back</a> |
 	<a href="/logout">logout</a>
