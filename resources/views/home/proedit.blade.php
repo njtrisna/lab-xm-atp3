@@ -28,7 +28,7 @@
 		</tr>
 		<tr>
 			<td>Email</td>
-			<td><input type="text" name="cgpa" value="{{$std['email']}}"></td>
+			<td><input type="text" name="email" value="{{$std['email']}}"></td>
 		</tr>
 		
 			<td></td>

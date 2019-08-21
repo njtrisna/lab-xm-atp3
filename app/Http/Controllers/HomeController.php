@@ -116,9 +116,11 @@ class HomeController extends Controller
 		return redirect()->route('home.stdlist');
 	}
 
-    public function profile(){
-
-        return view('home.profile');
+    public function profile(Request $req){
+		$request = $req->session()->get('username');
+		$user = User::where('username',$request)->get();
+		//echo $user;
+        return view('home.profile',['std'=>$user[0]]);
     }
 
     public function upload(Request $req){
@@ -143,6 +145,23 @@ class HomeController extends Controller
             echo "File upload error!";
         }
 
+    }
+	public function proedit($id){
+		$user = User::find($id);
+        return view('home.proedit',['std'=>$user]);
+    }
+	public function prosave(Request $req, $id){
+
+    	$user = User::find($id);
+
+
+    	$user->username = $req->uname;
+    	$user->name = $req->name;
+    	$user->email = $req->email;
+    	
+    	$user->save();
+
+		return redirect()->route('home.profile');
     }
 }
 

@@ -27,6 +27,8 @@ Route::group(['middleware'=>['sess']], function(){
 	
 
 	Route::get('/home/stdList', 'HomeController@show')->name('home.stdlist');
+	Route::get('/home/profile/{sid}', 'HomeController@proedit')->name('home.proedit');
+	Route::post('/home/profile/{sid}', 'HomeController@prosave');
 	Route::get('/home/edit/{sid}', 'HomeController@edit')->name('home.edit');
 	Route::post('/home/edit/{sid}', 'HomeController@update');
 	Route::get('/home/details/{sid}', 'HomeController@details')->name('home.details');

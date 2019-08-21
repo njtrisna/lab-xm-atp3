@@ -7,11 +7,27 @@
 	<h1>Profile</h1> 
 
 	
-	<form method="post" enctype="multipart/form-data">
-		{{csrf_field()}}
-		<input type="file" name="pic">
-		<input type="submit" name="submit" value="Submit">
-	</form>
+	<table border="0">
+		<tr>
+			<td>UserId :</td>
+			<td>{{$std['id']}}</td>
+		</tr>
+		<tr>
+			<td>Username :</td>
+			<td>{{$std['username']}}</td>
+		</tr>
+		<tr>
+			<td>Name :</td>
+			<td>{{$std['name']}}</td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td>{{$std['email']}}</td>
+		</tr>
+		<a href="{{route('home.proedit',$std['id'])}}">Edit</a> |
+		<a href="{{route('home.index')}}">home</a> |
+		
+</table>
 
 
 
