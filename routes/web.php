@@ -22,6 +22,7 @@ Route::group(['middleware'=>['sess']], function(){
 											/*investor*/
 
 	Route::get('/ninvestor', 'investorController@index')->name('investor.index');
+	Route::get('/ninvestor', 'investorController@index')->name('investor.index');
 	Route::get('/ninvestor/profile', 'investorController@show')->name('investor.profile');
 	Route::get('/ninvestor/edit/{sid}', 'investorController@edit')->name('investor.edit');
 	Route::post('/ninvestor/edit/{sid}', 'investorController@update');

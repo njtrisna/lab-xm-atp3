@@ -94,6 +94,7 @@ class HomeController extends Controller
     public function update(Request $req, $id){
 
     	$user = User::find($id);
+		$user = User::find($id);
 
     	$user->username = $req->uname;
     	$user->name = $req->name;
