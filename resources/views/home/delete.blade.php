@@ -10,6 +10,7 @@
 
 	<a href="{{route('home.stdlist')}}">Back</a> |
 	<a href="/logout">logout</a>
+	<a href="/logout">logout</a>
 
 <form method="post">
 	@csrf
