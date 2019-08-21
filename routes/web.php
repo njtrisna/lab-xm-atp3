@@ -14,8 +14,8 @@ Route::get('/abc', function () {
 //Route::get('/login', 'LoginController@index');
 Route::get('/login', ['as'=>'login.index','uses'=>'LoginController@index']);
 Route::post('/login', ['uses'=>'LoginController@verify']);
-Route::get('/ninvestor/Registration', 'investorController@add')->name('investor.Registration');
-Route::post('/ninvestor/Registration', 'investorController@create');
+Route::get('/customer/registration', 'customerController@add')->name('customer.registration');
+Route::post('/customer/registration', 'customerController@create');
 
 Route::group(['middleware'=>['sess']], function(){
 
@@ -24,6 +24,7 @@ Route::group(['middleware'=>['sess']], function(){
 	Route::get('/home', 'HomeController@index')->name('home.index');
 	Route::get('/home/profile', 'HomeController@profile')->name('home.profile');
 	Route::post('/home/profile', 'HomeController@upload');
+	
 
 	Route::get('/home/stdList', 'HomeController@show')->name('home.stdlist');
 	Route::get('/home/edit/{sid}', 'HomeController@edit')->name('home.edit');
