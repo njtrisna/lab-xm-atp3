@@ -118,7 +118,7 @@ class HomeController extends Controller
 
     public function profile(Request $req){
 		$request = $req->session()->get('username');
-		$user = User::where('username',$request)->get();
+		$user = User::where('type','customer')->get();
 		//echo $user;
         return view('home.profile',['std'=>$user[0]]);
     }
